@@ -61,15 +61,13 @@ html
     div.container  
       h1.my-4 Welcome to Modern Business
       div.row
-        each item in project
-          div.col-lg-4.col-sm-6.portfolio-item
-            div.card.h-100
-              a( href="#")
-                img(class="card-img-top" src="#{item.imageurl}" alt="")
-              div.card-body
-                h4.card-title
-                  a(href="/project/#{item.id}") #{item.title}
-                p.card-text #{item.description}
+        div.card.h-100
+            a( href="#")
+            img(class="card-img-top" src="#{project.imageurl}" alt="")
+            div.card-body
+            h4.card-title
+                a(href="#") #{project.title}
+            p.card-text #{project.description}
       div.row
         div.col-lg-6
           h2 Modern Business Features
