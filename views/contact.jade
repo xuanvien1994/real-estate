@@ -10,6 +10,9 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel="stylesheet", href="/vendor/bootstrap/css/bootstrap.min.css")
     link(rel='stylesheet', href='/stylesheets/modern-business.css')
+    
+    script(src="/vendor/jquery/jquery.min.js")
+    script(src="/vendor/bootstrap/js/bootstrap.bundle.min.js")
   body
     nav.navbar.fixed-top.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
       div.container
@@ -25,3 +28,57 @@ html
               a(class="nav-link", href="/service") Service
             li.nav-item
               a(class="nav-link", href="/contact") Contact
+            li.nav-item.dropdown
+              a(class="nav-link dropdown-toggle", href="#", id="navbarDropdownPortfolio", data-toggle="dropdown", aria-haspopup="true", aria-expanded="false") Portfolio
+              div(class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio")
+                a( class="dropdown-item" href="portfolio-1-col.html") Column 1
+                a( class="dropdown-item" href="portfolio-2-col.html") Column 2
+    div.container
+        h1.mt-4.mb-3 Contact 
+            small Subheading
+        ol.breadcrumb
+            li.breadcrumb-item
+                a( href="/") Home
+            li.breadcrumb-item.active Contact
+        div.row
+            div.col-lg-8.mb-4
+                iframe(width="100%" height="400px" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?hl=en&amp;ie=UTF8&amp;ll=37.0625,-95.677068&amp;spn=56.506174,79.013672&amp;t=m&amp;z=4&amp;output=embed")
+            div.col-lg-4.mb-4
+                h3 Contact Details
+                p 3481 Melrose Place 
+                    
+                    <br>Beverly Hills, CA 90210 
+                    <br>
+                p 
+                    abbr(title="Phone") P: (123) 456-7890 
+                p 
+                    abbr(title="Email") E: 
+                    a( href="mailto:name@example.com") name@example.com
+                p 
+                    abbr(title="Hours") H : Monday - Friday: 9:00 AM to 5:00 PM 
+        div.row
+            div.col-lg-8.mb-4
+                h3 Send us a Message
+                form(name="sentMessage" id="contactForm" novalidate)
+                    div.control-group.form-group
+                        div.controls
+                            label Full Name:
+                            input( type="text" class="form-control" id="name" required data-validation-required-message="Please enter your name.")
+                    div.control-group.form-group
+                        div.controls
+                            label Phone Number:
+                            input( type="tel" class="form-control" id="phone" required data-validation-required-message="Please enter your phone number.")
+                    div.control-group.form-group
+                        div.controls
+                            label Email Address:
+                            input(type="email" class="form-control" id="email" required data-validation-required-message="Please enter your email address.")
+                    div.control-group.form-group
+                        div.controls
+                            label Message:
+                            textarea(rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none")
+                    div#success
+                    button(type="submit" class="btn btn-primary" id="sendMessageButton") Send Message
+    footer.py-5.bg-dark
+      div.container
+        p.m-0.text-center.text-white Copyright &copy; Your Website 2018
+    
